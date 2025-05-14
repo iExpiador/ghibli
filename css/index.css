@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
+*:hover {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+section {
+  float: left;
+  width: 100%;
+  background: #fff;
+  /* fallback for old browsers */
+  padding: 30px 0;
+}
+h1 {
+  float: left;
+  width: 100%;
+  color: #232323;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+h1 span {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  font-size: 45px;
+  text-transform: none;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font-weight: 700;
+}
+h1 a {
+  color: #131313;
+  font-weight: bold;
+}
+
+/*Profile card 4*/
+.profile-card-4 .card-img-block {
+  float: left;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.profile-card-4 .card-body {
+  position: relative;
+}
+.profile-card-4 .profile {
+  border-radius: 50%;
+  position: absolute;
+  top: -62px;
+  left: 50%;
+  width: 100px;
+  border: 3px solid rgba(255, 255, 255, 1);
+  margin-left: -50px;
+}
+.profile-card-4 .card-img-block {
+  position: relative;
+}
+.profile-card-4 .card-img-block > .info-box {
+  position: absolute;
+  background: #db709396;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  opacity: 0;
+}
+.profile-card-4 .card-img-block:hover > .info-box {
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.profile-card-4 h5 {
+  font-weight: 600;
+  color: palevioletred;
+}
+.profile-card-4 .card-text {
+  font-weight: 300;
+  font-size: 19px;
+}
+.profile-card-4 .icon-block {
+  float: left;
+  width: 100%;
+}
+.profile-card-4 .icon-block a {
+  text-decoration: none;
+}
+.profile-card-4 i {
+  display: inline-block;
+  font-size: 16px;
+  color: palevioletred;
+  text-align: center;
+  border: 1px solid palevioletred;
+  width: 38px;
+  height: 36px;
+  line-height: 35px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.profile-card-4 i:hover {
+  background-color: palevioletred;
+  color: #fff;
+}
+/*Profile Card 5*/
+.profile-card-5 {
+  margin-top: 20px;
+}
+.profile-card-5 .btn {
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 7px 20px;
+}
+.profile-card-5 .card-img-block {
+  width: 91%;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+}
+.profile-card-5 .card-img-block img {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+}
+.profile-card-5 h5 {
+  color: #4e5e30;
+  font-weight: 600;
+}
+.profile-card-5 p {
+  font-size: 14px;
+  font-weight: 300;
+}
+.profile-card-5 .btn-primary {
+  background-color: #4e5e30;
+  border-color: #4e5e30;
+}
+.friend-profile {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: #131313 0px 0px 1px;
+}
+.online_status {
+  align-items: center;
+  background: deeppink;
+  border-radius: 32px;
+  display: flex;
+  gap: 0.5rem;
+  height: 32px;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  width: 100px;
+}
+.dots {
+  background: gray;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
+  height: 10px;
+  margin: 3px;
+  width: 16px;
+}
+.dots.red {
+  background: red;
+}
+.dots.green {
+  background: lime;
+}
+
+.water-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(to bottom, pink, #ff64b8);
+  perspective: 1000px;
+}
+.water-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0.6;
+  will-change: transform, opacity;
+}
+.layer-1 {
+  background: url("noise-texture.png") repeat;
+  background-size: 200px;
+  animation: wave-motion-1 20s ease-in-out infinite alternate;
+  filter: blur(8px);
+  opacity: 0.5;
+}
+.layer-2 {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
+  animation: wave-motion-2 18s linear infinite;
+  filter: blur(5px);
+  opacity: 0.7;
+  transform: translateZ(-50px);
+}
+.layer-3 {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  animation: wave-motion-3 22s ease infinite alternate-reverse;
+  filter: blur(6px);
+  opacity: 0.6;
+  transform: translateZ(-100px);
+}
+.water-highlights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--highlight-x, 50%) var(--highlight-y, 50%), rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 50%);
+  mix-blend-mode: screen;
+  opacity: var(--highlight-opacity, 0.7);
+  will-change: transform, opacity;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  pointer-events: none;
+}
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-fade-out 1s ease-out forwards;
+  will-change: transform, opacity;
+}
+@keyframes wave-motion-1 {
+  0% {
+    transform: scale(1, 1) translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.03, 0.97) translate(30px, 15px) rotate(1deg);
+  }
+  100% {
+    transform: scale(1, 1) translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes wave-motion-2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(50px, 20px) rotate(2deg);
+  }
+}
+@keyframes wave-motion-3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-40px, -15px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes particle-fade-out {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--particle-end-x), var(--particle-end-y)) scale(0.2);
+    opacity: 0;
+  }
+}
+.rounded-span {
+  background: palevioletred;
+  color: white;
+  padding: 5px;
+  border-radius: 16px;
+  font-size: 10px;
+  margin: 0px;
+}
+.absolute-profile-container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+}
+.absolute-profile-name {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 20px #000;
+}
+body,
+span,
+h1,
+h5,
+p {
+  font-family: "Akaya Kanadaka", system-ui !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Start https://www.cursors-4u.com */
+* {
+  cursor: url(https://cur.cursors-4u.net/others/oth-9/oth800.cur), auto !important;
+} /* End https://www.cursors-4u.com */
+
+body {
+  font-family: Arial;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid transparent;
+  background-color: #ffffff;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+
+/* Create an active/current tablink class */
+
+.tab button.active i {
+  background-color: palevioletred;
+  color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  visibility: hidden;
+  padding: 0px;
+  border: 0px solid #ccc;
+  border-top: none;
+  opacity: 0;
+  transition: opacity 1s;
+  height: 0;
+}
+.tabcontent.activetab {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+  height: auto;
+}
+
+.tab {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 20px; /* Espaciado superior opcional */
+}
+
+.regnumber {
+  background: palevioletred;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 13px;
+  margin: 0px;
+  font-family: "Courier New", Courier, monospace !important;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.regcontainer {
+  text-align: center; /* Centra el elemento .regnumber dentro del contenedor */
+}
+
+.profile-card-4 {
+  border-radius: 30px;
+}
+
+.card-img-block {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.section {
+  box-shadow: 0px 0px 30px pink;
+  border: 3px solid white;
+  border-radius: 35px;
+  box-shadow: 0px 0px 30px pink;
+}
+
+.test-shine {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.test-shine:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Hover state - trigger effect */
+.test-shine:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+.test-shine:active:after {
+  opacity: 0;
+}
+
+.banner-title {
+  background: #ffdfea;
+  color: white;
+  padding: 10px;
+  border-radius: 16px;
+  font-size: 20px;
+  margin: 0;
+  border: 1px solid #db7093;
+  color: #db7093;
+}
