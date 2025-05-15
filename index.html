@@ -21,7 +21,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 
     <div
-      class="water-background"
+      class="water-background align-content-center"
       style="min-height: 100vh"
     >
       <section
@@ -293,6 +293,16 @@
                   </div>
                 </div>
               </div>
+              <div
+                id="music"
+                class="tabcontent"
+              >
+                <!-- Dynamic content -->
+                <div
+                  class="col-md-12"
+                  style="min-height: 400px"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
@@ -323,73 +333,6 @@
   />
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const waterHighlights = document.querySelector(".water-highlights");
-      const particleContainer = document.querySelector(".particle-container");
-      const waterBackground = document.querySelector(".water-background");
-
-      let mouseX = window.innerWidth / 2;
-      let mouseY = window.innerHeight / 2;
-
-      waterBackground.addEventListener("mousemove", (event) => {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-      });
-
-      function updateHighlightPosition() {
-        const targetX = (mouseX / window.innerWidth) * 100;
-        const targetY = (mouseY / window.innerHeight) * 100;
-
-        const currentX = parseFloat(waterHighlights.style.getPropertyValue("--highlight-x") || 50);
-        const currentY = parseFloat(waterHighlights.style.getPropertyValue("--highlight-y") || 50);
-
-        const lerpFactor = 0.05;
-        const newX = currentX + (targetX - currentX) * lerpFactor;
-        const newY = currentY + (targetY - currentY) * lerpFactor;
-
-        waterHighlights.style.setProperty("--highlight-x", `${newX}%`);
-        waterHighlights.style.setProperty("--highlight-y", `${newY}%`);
-
-        waterHighlights.style.setProperty("--highlight-opacity", "0.8");
-      }
-
-      function createParticle(x, y) {
-        const particle = document.createElement("div");
-        particle.classList.add("particle");
-        particle.style.left = `${x}px`;
-        particle.style.top = `${y}px`;
-
-        const endX = (Math.random() - 0.5) * 100;
-        const endY = (Math.random() - 0.5) * 100;
-        particle.style.setProperty("--particle-end-x", `${endX}px`);
-        particle.style.setProperty("--particle-end-y", `${endY}px`);
-
-        particleContainer.appendChild(particle);
-
-        particle.addEventListener("animationend", () => {
-          particle.remove();
-        });
-      }
-
-      let lastParticleTime = 0;
-      const particleInterval = 10;
-
-      waterBackground.addEventListener("mousemove", (event) => {
-        const currentTime = Date.now();
-        if (currentTime - lastParticleTime > particleInterval) {
-          createParticle(event.clientX + (Math.random() - 0.5) * 10, event.clientY + (Math.random() - 0.5) * 10);
-          lastParticleTime = currentTime;
-        }
-      });
-
-      function animate() {
-        updateHighlightPosition();
-        requestAnimationFrame(animate);
-      }
-
-      animate();
-    });
-
     function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -411,7 +354,6 @@
   <script>
     window.addEventListener("load", function () {
       window.addEventListener("mousedown", playMP3);
-      window.addEventListener("mousemove", playMP3);
       let sound = new Audio("./music/bittersweet.mp3");
       function playMP3(e) {
         e.preventDefault();
